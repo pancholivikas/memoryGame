@@ -1,0 +1,90 @@
+
+body {
+  background: #000;
+  background-image: url("../../images/background.jpg");
+	min-height: 100vh;
+  width: 100%;
+	font-family: "Arial", sans-serif;
+}
+
+h3{
+  color: #fff;
+}
+
+.navbar {
+  border-radius: 0px;
+  min-height: 70px;
+}
+
+.navbar-brand {
+  height: 70px;
+}
+
+.navbar-brand img {
+  height: 100%;
+  width: 100%;  
+}
+
+.container {
+  padding-top: 80px;
+}
+
+.play-game {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.progress {
+  background-color: lightyellow;
+}
+
+.md-card {
+  margin-left: 20px;
+  margin-top: 20px; 
+  height: 100px;
+  position: relative;
+  border: 1px solid #ccc;
+  perspective: 800px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.card div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.card .front {
+  background: grey;
+}
+.card .back {
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    transform: rotateY( 180deg );
+}
+
+
+.red{
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green{
+  background-color: green;
+
+}
+
+.blue {
+  background-color: blue;
+}
+

@@ -1,0 +1,49 @@
+<div class="background">
+  <div class="container">
+    
+    <div ng-if="vm.showGame">
+      <h3>Time Left : {{vm.timeLeft}} Seconds</h3>
+      <div class="progress">
+				<div class="progress-bar" role="progressbar" 	ng-style="{ 'width' : (vm.matches/8 * 100)+'%' }">
+          {{(vm.matches/8) * 100}}%
+				</div>
+			</div>
+      <div class="outer">
+        <div class="col-xs-3" ng-repeat="tile in vm.objArr" ng-click="vm.flipTile(tile)">
+          <section class="md-card">
+            <div class="card" ng-class="{flipped: tile.flipped}">
+              <div class="front">
+                Click to Flip!
+              </div>
+              <div class="back" ng-class="tile.color">
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="play-game" ng-if="!vm.showGame">
+      Still Want to play Game ->
+      <span class="btn btn-primary" ng-click="vm.start()">Start Game </span>
+    </div>
+  </div>
+
+  <div id="myModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{vm.game.header}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{vm.game.msg}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.start()">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
