@@ -22,7 +22,7 @@
         $('#myModal').modal('show');
         vm.start = function() {
             vm.showGame = true;
-            vm.timeLeft = 6;
+            vm.timeLeft = 60;
             vm.matches = 0;
             activate();
         }
